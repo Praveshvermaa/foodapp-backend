@@ -101,7 +101,7 @@ route.post("/removecart",async(req,res)=>{
 
     let success = false;
     if(data){
-        data.cartData = data.cartData.filter((item)=>(item.name!==req.body.name))
+        data.cartData = data.cartData.filter((item)=>(item._id!==req.body.id))
     success=true
     }
     await data.save()
@@ -113,7 +113,7 @@ route.post("/removecartcheckout",async(req,res)=>{
 
     let success = false;
     if(data){
-        data.cartData = data.cartData.filter((item)=>(item.name!==req.body.name))
+        data.cartData = data.cartData.filter((item)=>(item._id!==req.body.id))
     success=true
     }
     await data.save()
