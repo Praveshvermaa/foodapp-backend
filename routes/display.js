@@ -101,10 +101,11 @@ route.post("/removecart",async(req,res)=>{
 
     let success = false;
     if(data){
-        data.cartData = data.cartData.filter((item)=>(item._id!==req.body.id))
+        data.cartData = data.cartData.filter((item)=>(item._id!=req.body.id))
     success=true
     }
     await data.save()
+   
     res.json({success})
 })
 route.post("/removecartcheckout",async(req,res)=>{

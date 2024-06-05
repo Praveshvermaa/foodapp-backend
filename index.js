@@ -10,7 +10,7 @@ const route = require("./routes/display")
 const { default: mongoose } = require('mongoose')
 dotenv.config({path:"./.env"})
 require("./DB")
-const port = process.env.PORT || 4000
+const port = process.env.PORT 
 
 
 
