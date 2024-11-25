@@ -66,11 +66,7 @@ app.post("/login",async (req,res)=>{
     return  res.json({success:false})
     
 })
-cron.schedule('*/5 * * * *', () => {
-  axios.get(`https://foodapp-backend-l0u0.onrender.com`)
-    .then(() => console.log('Pinged self to keep warm'))
-    .catch(err => console.error('Error pinging self', err));
-});
+
 
 app.listen(port ,(req,res)=>{
     console.log("server is running on 3000");
